@@ -24,7 +24,7 @@ class PAYDAY3Game(Game):
     platforms_other = [
         KeymastersKeepGamePlatforms.PS5,
         KeymastersKeepGamePlatforms.XSX
-    ]
+        ]
 
     is_adult_only_or_unrated = True
 
@@ -191,18 +191,18 @@ class PAYDAY3Game(Game):
 
         display_name = "PAYDAY 3 Include Overkill"
 
-    class PD3DLCOwned(OptionSet):
-        """
-        Adds DLC Heists into the Heist pool for Objectives
-        """
+class PD3DLCOwned(OptionSet):
+    """
+    Adds DLC Heists into the Heist pool for Objectives
+    """
 
-        display_name = "PAYDAY 3 DLC Owned"
-        valid_keys = [
-            "Syntax Error",
-            "Boys In Blue",
-            "Houston Breakout",
-            "Fear & Greed",
-            "Party Powder"
-        ]
+    display_name = "PAYDAY 3 DLC Owned"
+    valid_keys = [
+        "Syntax Error",
+        "Boys In Blue",
+        "Houston Breakout",
+        "Fear & Greed",
+        "Party Powder"
+    ]
 
-        default = valid_keys
+    default = valid_keys
