@@ -184,12 +184,12 @@ class PAYDAY3Game(Game):
 
     #options
 
-    class PD3IncludeOverkill(Toggle):
-        """
-        If toggled, will add Overkill to the Difficulty pool for Objectives
-        """
+class PD3IncludeOverkill(Toggle):
+    """
+    If toggled, will add Overkill to the Difficulty pool for Objectives
+    """
 
-        display_name = "PAYDAY 3 Include Overkill"
+    display_name = "PAYDAY 3 Include Overkill"
 
 class PD3DLCOwned(OptionSet):
     """
