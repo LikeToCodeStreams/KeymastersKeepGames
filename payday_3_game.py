@@ -22,7 +22,7 @@ class PAYDAY3Game(Game):
     platform = KeymastersKeepGamePlatforms.PC
 
     platforms_other = [
-        KeymastersKeepGamePlatforms.PS5
+        KeymastersKeepGamePlatforms.PS5,
         KeymastersKeepGamePlatforms.XSX
     ]
 
