@@ -35,7 +35,7 @@ class PAYDAY3Game(Game):
     def optional_game_constraint_templates(self) -> List[GameObjectiveTemplate]:
         return list()
 
-    def game_objective_templates(self) -> List [GameObjectiveTemplate]:
+    def game_objective_templates(self) -> List[GameObjectiveTemplate]:
         return [
             GameObjectiveTemplate(
                 label="Beat LOUDHEIST on DIFFICULTY in Loud",
@@ -103,7 +103,7 @@ class PAYDAY3Game(Game):
         difficulty: List[str] = self.base_difficulty[:]
 
         if self.include_overkill:
-            difficulty.extend("Overkill")
+            difficulty.append("Overkill")
         
         return sorted(difficulty)
     
@@ -129,19 +129,19 @@ class PAYDAY3Game(Game):
         loud_heist: List[str] = self.loud_heist_base[:]
 
         if self.has_syntax_error:
-            loud_heist.extend("Syntax Error")
+            loud_heist.append("Syntax Error")
         
         if self.has_boys_in_blue:
-            loud_heist.extend("Boys In Blue")
+            loud_heist.append("Boys In Blue")
         
         if self.has_houston_breakout:
-            loud_heist.extend("Houston Breakout")
+            loud_heist.append("Houston Breakout")
         
         if self.has_fear_greed:
-            loud_heist.extend("Fear & Greed")
+            loud_heist.append("Fear & Greed")
         
         if self.has_party_powder:
-            loud_heist.extend("Party Powder")
+            loud_heist.append("Party Powder")
 
         return sorted(loud_heist)
 
@@ -166,19 +166,19 @@ class PAYDAY3Game(Game):
         stealth_heist: List[str] = self.stealth_heist_base[:]
 
         if self.has_syntax_error:
-            stealth_heist.extend("Syntax Error")
+            stealth_heist.append("Syntax Error")
         
         if self.has_boys_in_blue:
-            stealth_heist.extend("Boys In Blue")
+            stealth_heist.append("Boys In Blue")
         
         if self.has_houston_breakout:
-            stealth_heist.extend("Houston Breakout")
+            stealth_heist.append("Houston Breakout")
         
         if self.has_fear_greed:
-            stealth_heist.extend("Fear & Greed")
+            stealth_heist.append("Fear & Greed")
         
         if self.has_party_powder:
-            stealth_heist.extend("Party Powder")
+            stealth_heist.append("Party Powder")
         
         return sorted(stealth_heist)
 
