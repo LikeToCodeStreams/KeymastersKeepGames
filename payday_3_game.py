@@ -91,6 +91,10 @@ class PAYDAY3Game(Game):
     @property
     def has_party_powder(self) -> bool:
         return "Party Powder" in self.dlc_owned
+    
+    @property
+    def has_delivery_charge(self) -> bool:
+        return "Delivery Charge" in self.dlc_owned
 
 
     @functools.cached_property
@@ -145,6 +149,9 @@ class PAYDAY3Game(Game):
         if self.has_party_powder:
             loud_heist.append("Party Powder")
 
+        if self.has_delivery_charge:
+            loud_heist.append("Delivery Charge")
+
         return sorted(loud_heist)
 
     @functools.cached_property
@@ -182,6 +189,9 @@ class PAYDAY3Game(Game):
         if self.has_party_powder:
             stealth_heist.append("Party Powder")
         
+        if self.has_delivery_charge:
+            stealth_heist.append("Delivery Charge")
+        
         return sorted(stealth_heist)
 
     #options
@@ -204,7 +214,8 @@ class PAYDAY3DLCOwned(OptionSet):
         "Boys In Blue",
         "Houston Breakout",
         "Fear & Greed",
-        "Party Powder"
+        "Party Powder",
+        "Delivery Charge"
     ]
 
     default = valid_keys
